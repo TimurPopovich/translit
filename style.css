@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Montserrat+Alternates:wght@600&family=Press+Start+2P&display=swap');
+* {
+  font-family: 'Montserrat Alternates', sans-serif;
+  user-select: none;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 50px;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  background-color: chartreuse;
+  position: absolute;
+}
+.logo {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.link {
+  width: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.linkSite {
+  height: 50px;
+}
+img {
+  width: 45px;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+}
+.containerInput {
+  display: flex;
+  background-color: rgb(211, 231, 25);
+  width: max-content;
+  padding: 20px;
+  border-radius: 8px;
+  border: 2px solid greenyellow;
+  box-shadow: 0 0 10px 0 greenyellow;
+}
+#inputNewText {
+  font-family: 'Hachi Maru Pop', cursive;
+  border-radius: 7px;
+  padding: 8px;
+  margin: 0 10px 0 0;
+}
+#buttonInput {
+  font-family: 'Press Start 2P', cursive;
+  border-radius: 7px;
+  padding: 8px;
+  margin: auto;
+  background-color: greenyellow;
+  box-shadow: 0 0 10px 0 greenyellow;
+}
+#buttonInput:hover {
+  background-color: blueviolet;
+  -webkit-transition: all 0.6s; 
+  -moz-transition: all 0.6s;
+  -o-transition: all 0.6s;
+  transition: all 0.6s;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+
+}
+#wordBookAll {
+  display: flex;
+  width: 1000px;
+  min-height: 600px;
+  background-color: rgb(113, 86, 233);
+  border: 1px solid rgb(95, 112, 20);
+  border-radius: 8px;
+  margin-top: 50px;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  margin-bottom: 50px;
+}
+.wordBookBlock {
+  font-family: 'Train One', cursive;
+  display: flex;
+  align-items: center;
+  background-color: rgb(110, 185, 110);
+  flex-direction: column;
+  width: 500px;
+  border: 1px solid rgb(7, 70, 10);
+  position: relative;
+}
+.words {
+  font-size: 19px;
+  margin: 3px;            
+  white-space: nowrap;         /* Запрет переноса строк */
+  overflow: hidden;            /* Обрезаем все, что не помещается в область */
+  text-overflow: ellipsis;     /* Многоточие в конце */
+  width: 440px;                /* Максимальная длина строки */
+  text-align: center;          /* Текст по центру */
+  user-select: text;
+}
+.words:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1,1);
+  transform: scale(1.1);
+}
+
+/* Iphone X */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) { 
+    #wordBookAll {
+      flex-wrap: wrap;
+       width: 550px;
+    }
+    .containerInput {
+      flex-wrap: wrap;
+      width: min-content;
+    }
+    #inputNewText {
+      margin: 10px;
+    }
+    .header {
+      font-size: 35px;
+    }
+    .wordBookBlock {
+      width: inherit;
+    }
+    .words {
+      width: inherit;
+    }
+  }
+/* Iphone SE */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px) {
+    #wordBookAll {
+      flex-wrap: wrap;
+      width: 310px;
+    }
+    .main {
+      margin-top: 140px;
+    }
+    .containerInput {
+      flex-wrap: wrap;
+      width: 250px;
+    }
+    #inputNewText {
+      max-width: 213px;
+      margin: 10px;
+    }
+    .header {
+      font-size: 35px;
+      flex-wrap: wrap;
+      justify-content: center;
+      height: max-content;
+    }
+    .wordBookBlock {
+      width: inherit;
+    }
+    .words {
+      width: inherit;
+    }
+    .logo {
+      margin-right: 10px;
+    }
+  }
+/* iPad Pro 10.5 */
+@media only screen 
+  and (min-device-width: 834px) 
+  and (max-device-width: 1112px) {
+    #wordBookAll {
+      flex-wrap: wrap;
+      width: 800px;
+    }
+    .wordBookBlock {
+      width: inherit;
+    }
+    .words {
+      width: inherit;
+      max-width: 780px;
+    }
+}
+/* Watch */
+@media 
+  (max-device-width: 218px)
+  and (max-device-height: 281px) { 
+    #wordBookAll {
+      flex-wrap: wrap;
+      width: 210px;
+    }
+    .containerInput {
+      flex-wrap: wrap;
+      width: 160px;
+    }
+    #inputNewText {
+      max-width: 120px;
+      margin: 10px;
+    }
+    .header {
+      font-size: 28px;
+    }
+}
+/* All bag's fix */
+@media only screen 
+  and (min-device-width: 813px) 
+  and (max-device-width: 833px) { 
+    #wordBookAll {
+      flex-wrap: wrap;
+      width: 800px;
+    }
+    .wordBookBlock {
+      width: 800px;
+    }
+    .wordBookBlock {
+      width: inherit;
+    }
+    .words {
+      width: inherit;
+      max-width: 780px;
+    }
+}
+@media only screen 
+  and (min-device-width: 200px) 
+  and (max-device-width: 319px) { 
+    #wordBookAll {
+      flex-wrap: wrap;
+      width: 190px;
+    }
+    .containerInput {
+      flex-wrap: wrap;
+      width: 150px;
+    }
+    #inputNewText {
+      max-width: 110px;
+      margin: 10px;
+    }
+    .header {
+      font-size: 20px;
+    }
+    .header {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .wordBookBlock {
+      width: inherit;
+    }
+    .words {
+      width: inherit;
+      max-width: 780px;
+    }
+} 
+
